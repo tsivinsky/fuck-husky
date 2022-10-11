@@ -27,5 +27,5 @@ setNpmScript("prepare", `git config --local core.hooksPath ${hooksDir}`);
 const huskyDirExists = existsSync(HUSKY_PATH);
 if (huskyDirExists) {
   await fs.rename(HUSKY_PATH, HOOKS_PATH);
-  await fs.rmdir(path.join(HUSKY_PATH, "_"));
+  await fs.rmdir(path.join(HUSKY_PATH, "_")).catch((err) => err);
 }
