@@ -15,5 +15,8 @@
     "git",
     "hooks",
     "git-hooks"
-  ]
+  ],
+  "bin": {
+    "fuck-husky": "node index.js"
+  }
 }
