@@ -1,0 +1,19 @@
+{
+  "name": "fuck-husky",
+  "version": "0.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "description": "simple script that allows you to delete husky from your dependencies",
+  "author": {
+    "name": "Daniil Tsivinsky",
+    "url": "https://tsivinsky.com",
+    "email": "daniil@tsivinsky.com"
+  },
+  "keywords": [
+    "husky",
+    "git",
+    "hooks",
+    "git-hooks"
+  ]
+}
