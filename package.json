@@ -18,5 +18,8 @@
   ],
   "bin": {
     "fuck-husky": "./index.js"
+  },
+  "scripts": {
+    "fuck-husky": "./index.js"
   }
 }
