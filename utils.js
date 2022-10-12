@@ -26,14 +26,7 @@ export async function clearHookScriptsFromHusky() {
       });
       const newData = data
         .split("\n")
-        .map((line, i) => {
-          if (i !== 1) return line; // check only 2nd line
-
-          if (/husky\.sh/.test(line)) {
-            return null;
-          }
-        })
-        .filter((v) => !!v)
+        .filter((line) => !/husky\.sh/.test(line))
         .join("\n");
 
       await fs.writeFile(pathToFile, newData, {
