@@ -1,5 +1,4 @@
 import cp from "child_process";
-import { __dirname } from "./constants.js";
 
 export function setNpmScript(scriptName = "", scriptValue = "") {
   const npmVersion = cp.execSync("npm -v", { encoding: "utf-8" });
