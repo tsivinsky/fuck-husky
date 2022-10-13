@@ -4,8 +4,19 @@ import { existsSync } from "fs";
 import fs from "fs/promises";
 import path from "path";
 import { setNpmScript, clearHookScriptsFromHusky } from "./utils.js";
+import pkg from "./package.json" assert { type: "json" };
 
 const [, , ...args] = process.argv;
+
+if (args.includes("--version") || args.includes("-v")) {
+  console.log(pkg.version);
+  process.exit(0);
+}
+
+if (args.includes("--help") || args.includes("-h")) {
+  console.log("Usage: fuck-husky ./path/to/git/hooks/");
+  process.exit(0);
+}
 
 const hooksDir = args[0];
 if (!hooksDir) {
