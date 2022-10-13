@@ -27,4 +27,8 @@ if (huskyDirExists) {
     .rm(path.join(HUSKY_PATH, "_"), { force: true, recursive: true })
     .catch((err) => err);
   await fs.rename(HUSKY_PATH, HOOKS_PATH);
+} else {
+  if (!existsSync(HOOKS_PATH)) {
+    await fs.mkdir(HOOKS_PATH);
+  }
 }
